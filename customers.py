@@ -85,3 +85,18 @@ for product_name, product_details in catalog.items():
     if product_details["stock"] < 20:
         print(f"LOW STOCK: {product_name} ({product_details['stock']} left)")
 
+
+print("-- Exercise 8 --")
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200}
+]
+
+summary = {}
+for t in transactions:
+    region = t["region"]
+    summary[region] = summary.get(region, 0) + t["amount"]   # add to the running total
+
+for region in sorted(summary):
+    print(f"{region}: {summary[region]}")

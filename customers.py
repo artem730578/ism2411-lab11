@@ -35,3 +35,13 @@ try:
     print(customer["email"])
 except KeyError as e:
     print("KeyError:", e)
+
+
+print("-- Exercise 4 --")
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+for key in customer:
+    print(key)
+# Without .items(), the loop only gives the keys, not the values.
+# To get the value that way I have to write customer[key] inside the loop.

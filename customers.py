@@ -2,6 +2,16 @@
 # Author Artem
 # Module 11 Lab: Customer Dictionary & Lookup
 
+# Reflection
+# 1. I use .get() when a field might be missing, like an optional email or
+# phone number, because it returns a default instead of raising an error. I use 
+# brackets when the key must exist, like a customer's name, so a missing key shows
+# me there is a real problem. Rule: optional field - use .get(), required field - use brackets.
+
+# 2. Exercise 8 is like a pivot table in Excel that totals sales by region.
+# Python is better for large data because the same loop works on millions of rows,
+# runs automatically, and does not need manual updates.
+
 
 print("-- Exercise 1 --")
 customer = {

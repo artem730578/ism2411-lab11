@@ -2,6 +2,7 @@
 # Author Artem
 # Module 11 Lab: Customer Dictionary & Lookup
 
+
 print("-- Exercise 1 --")
 customer = {
     "name": "Alice", #Key : Value,
@@ -25,3 +26,12 @@ print(customer)
 del customer['email'] #Deleting a key value pair from the dictionary
 del customer['Name'] #Deleting a key value pair from the dictionary
 print(customer)
+
+
+
+print("-- Exercise 3 --")
+print(customer.get("email", "no email on file"))
+try:
+    print(customer["email"])
+except KeyError as e:
+    print("KeyError:", e)
